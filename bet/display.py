@@ -5,7 +5,7 @@ import discord
 from ballsdex.core.models import Trade as TradeModel
 from ballsdex.core.utils import menus
 from ballsdex.core.utils.paginator import Pages
-from ballsdex.packages.match.match_user import MatchingUser
+from ballsdex.packages.bet.match_user import MatchingUser
 
 if TYPE_CHECKING:
     from ballsdex.core.bot import BallsDexBot
