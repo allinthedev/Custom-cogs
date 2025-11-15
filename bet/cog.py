@@ -19,9 +19,9 @@ from ballsdex.core.utils.transformers import (
     SpecialEnabledTransform,
     TradeCommandType,
 )
-from ballsdex.packages.match.display import MatchViewFormat
-from ballsdex.packages.match.menu import BulkAddView, MatchMenu, MatchViewMenu
-from ballsdex.packages.match.match_user import MatchingUser
+from ballsdex.packages.bet.display import MatchViewFormat
+from ballsdex.packages.bet.menu import BulkAddView, MatchMenu, MatchViewMenu
+from ballsdex.packages.bet.match_user import MatchingUser
 from ballsdex.settings import settings
 
 if TYPE_CHECKING:
