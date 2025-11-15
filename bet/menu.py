@@ -15,15 +15,15 @@ from ballsdex.core.utils import menus
 from ballsdex.core.utils.buttons import ConfirmChoiceView
 from ballsdex.core.utils.paginator import Pages
 from ballsdex.packages.balls.countryballs_paginator import CountryballsViewer
-from ballsdex.packages.match.display import fill_match_embed_fields
-from ballsdex.packages.match.match_user import MatchingUser
+from ballsdex.packages.bet.display import fill_match_embed_fields
+from ballsdex.packages.bet.match_user import MatchingUser
 from ballsdex.settings import settings
 
 if TYPE_CHECKING:
     from ballsdex.core.bot import BallsDexBot
-    from ballsdex.packages.match.cog import Match as MatchCog
+    from ballsdex.packages.bet.cog import Match as MatchCog
 
-log = logging.getLogger("ballsdex.packages.match.menu")
+log = logging.getLogger("ballsdex.packages.bet.menu")
 
 
 class InvalidMatchOperation(Exception):
