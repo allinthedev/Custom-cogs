@@ -161,14 +161,14 @@ class MatchMenu:
         remove_command = self.cog.remove.extras.get("mention", "`/match remove`")
         view_command = self.cog.view.extras.get("mention", "`/match view`")
 
-        self.embed.title = "CHAMPFUT MATCH"
+        self.embed.title = "DEVILFRUIT BET"
         self.embed.color = discord.Colour.gold()
         self.embed.description = (
             f"Add {settings.plural_collectible_name} you want to bet "
             f"using the {add_command} and {remove_command} commands.\n"
             "Once you're ready, click the lock button below to confirm your bet.\n"
             "**When both players lock their bets, a winner will be chosen randomly (50/50 chance).**\n"
-            "**The winner gets ALL balls from both bets!**\n\n"
+            "**The winner gets ALL fruits from both bets!**\n\n"
             "*This match will timeout "
             f"{format_dt(utcnow() + timedelta(minutes=30), style='R')}.*\n\n"
             f"Use the {view_command} command to see your full bet."
