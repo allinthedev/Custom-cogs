@@ -31,7 +31,7 @@ if TYPE_CHECKING:
 @app_commands.guild_only()
 class Match(commands.GroupCog):
     """
-    Challenge other players to 50/50 matches where winner takes all devilfruits.
+    Challenge other players to 50/50 matches where winner takes all items.
     """
 
     def __init__(self, bot: "BallsDexBot"):
@@ -102,7 +102,7 @@ class Match(commands.GroupCog):
     @app_commands.command()
     async def begin(self, interaction: discord.Interaction["BallsDexBot"], user: discord.User):
         """
-        Begin a 50/50 match with the chosen user where winner takes all fruits.
+        Begin a 50/50 match with the chosen user where winner takes all items.
 
         Parameters
         ----------
@@ -168,7 +168,7 @@ class Match(commands.GroupCog):
         special: SpecialEnabledTransform | None = None,
     ):
         """
-        Add a devilfruit to your match bet.
+        Add an item to your match bet.
 
         Parameters
         ----------
@@ -242,11 +242,11 @@ class Match(commands.GroupCog):
         filter: FilteringChoices | None = None,
     ):
         """
-        Bulk add devilfruits to your match bet, with parameters to aid with searching.
+        Bulk add items to your match bet, with parameters to aid with searching.
 
         Parameters
         ----------
-        devilfruit: fruit
+        items: item
             The countryball you would like to filter the results to
         sort: SortingChoices
             Choose how countryballs are sorted. Can be used to show duplicates.
@@ -299,7 +299,7 @@ class Match(commands.GroupCog):
         special: SpecialEnabledTransform | None = None,
     ):
         """
-        Remove a devilfruit from your match bet.
+        Remove an item from your match bet.
 
         Parameters
         ----------
@@ -338,7 +338,7 @@ class Match(commands.GroupCog):
     @app_commands.command()
     async def view(self, interaction: discord.Interaction["BallsDexBot"]):
         """
-        View your current match and the fruits you've bet.
+        View your current match and the items you've bet.
         """
         match, player = self.get_match(interaction)
         if not match or not player:
@@ -349,7 +349,7 @@ class Match(commands.GroupCog):
 
         if not player.bet:
             await interaction.response.send_message(
-                "You have no fruits in your current bet.", ephemeral=True
+                "You have no items in your current bet.", ephemeral=True
             )
             return
 
